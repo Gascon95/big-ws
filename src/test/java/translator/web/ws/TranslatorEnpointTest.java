@@ -42,6 +42,7 @@ public class TranslatorEnpointTest {
 		GetTranslationRequest request = new GetTranslationRequest();
 		request.setLangFrom("en");
 		request.setLangTo("es");
+		//Frase random
 		request.setText("I find your lack of faith disturbing");
 		Object response = new WebServiceTemplate(marshaller).marshalSendAndReceive("http://localhost:"
 				+ port + "/ws", request);
