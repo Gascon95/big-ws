@@ -42,11 +42,11 @@ public class TranslatorEnpointTest {
 		GetTranslationRequest request = new GetTranslationRequest();
 		request.setLangFrom("en");
 		request.setLangTo("es");
-		request.setText("May the Force be with you");
+		request.setText("I find your lack of faith disturbing");
 		Object response = new WebServiceTemplate(marshaller).marshalSendAndReceive("http://localhost:"
 				+ port + "/ws", request);
 		assertNotNull(response);
 		assertThat(response, instanceOf(GetTranslationResponse.class));
-		assertThat(((GetTranslationResponse) response).getTranslation(), is("Que la Fuerza esté con ustedes"));
+		assertThat(((GetTranslationResponse) response).getTranslation(), is("Creo que su falta de fe inquietante"));
 	}	
 }
