@@ -21,7 +21,7 @@ public class TranslatorServiceTest {
     @Test
     public void translateTest() throws Exception {
         TranslatedText translatedText = translatorService.translate("en", "es", "I find your lack of faith disturbing");
-        assertEquals("Creo que su falta de fe inquietante",translatedText.getTranslation());
+        assertEquals("Su falta de fe resulta molesta",translatedText.getTranslation());
     }
 
 }
